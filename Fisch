@@ -61,7 +61,15 @@ Windows.Size = UDim2.new(1, 0, 1, 0)
 -- Enhanced visual effects
 local function createGradient(parent, colors)
 	local gradient = Instance.new("UIGradient")
-	gradient.Color = ColorSequence.new(colors)
+	
+	-- Convert Color3 values to ColorSequenceKeypoint objects
+	local keypoints = {}
+	for i, color in ipairs(colors) do
+		local time = (i - 1) / (#colors - 1)
+		table.insert(keypoints, ColorSequenceKeypoint.new(time, color))
+	end
+	
+	gradient.Color = ColorSequence.new(keypoints)
 	gradient.Parent = parent
 	return gradient
 end
