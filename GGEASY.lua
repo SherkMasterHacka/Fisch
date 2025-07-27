@@ -1,6 +1,4 @@
-local AvatarChatService = game:GetService("AvatarChatService")
-repeat wait() until AvatarChatService:GetAttribute("Enabled") == "KUYRAIINAHEE"
-AvatarChatService:SetAttribute("Enabled", nil)
+
 
 local Debug = true
 
