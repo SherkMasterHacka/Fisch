@@ -116,7 +116,7 @@ function MacLib:Window(Settings)
 	base.BorderSizePixel = 0
 	base.Position = UDim2.fromScale(0.5, 0.5)
 	local camera = workspace.CurrentCamera
-	base.Size = UDim2.fromOffset(0.661, 982)
+	base.Size = UDim2.fromScale(0.661, 982)
 
 	local baseUIScale = Instance.new("UIScale")
 	baseUIScale.Name = "BaseUIScale"
